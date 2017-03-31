@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/zero.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="js/tmpl.js"></script>
+    <script src="js/script.js"></script>
+    <title>13-14</title>
+</head>
+
+<body>
+  <div id="modal_form">
+        <span id="modal_close">X</span>
+  </div>
+  <div id="overlay"></div>
+</body>
+<script type="text/tmpl" id="test">
+<div class="wrapper">
+<h1><%= title%><h1>
+<form method="post">
+<p><%= questions.question1 %></p>
+<% for (var i = 0; i < answers.length; i++) { %>
+<label><input type="checkbox" name="" value=<%= answers[i].answer %>>:<%= answers[i].answer %></label>
+<% }; %>
+<%= questions.question2 %>
+<% for (var i = 0; i < answers1.length; i++) { %>
+<label><input type="checkbox" name="" value=<%= answers1[i].answer %>><%= answers1[i].answer  %></label>
+<% }; %>
+<%= questions.question3 %>
+<% for (var i = 0; i < answers2.length; i++) { %>
+<label><input type="checkbox" name="" value=<%= answers2[i].answer %>><%= answers2[i].answer  %></label>
+<% }; %>
+<%= submit%>
+<%= reset%>
+</form>
+</div>
+</script>
+
+</html>
